@@ -1,0 +1,40 @@
+body{
+    font-family: 'poppins';
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #1e1e1e6c;
+    backdrop-filter: blur(10px);
+    color: white;
+    position: fixed;
+}
+header h1{
+    padding-left: 10px;
+}
+header ul{
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+header ul li{
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+header ul li:hover{
+    backdrop-filter: blur(5px);
+}
+
+.home{
+    height: 100vh;
+    width: 100vw;
+    background: url(./1.jpg);
+}
