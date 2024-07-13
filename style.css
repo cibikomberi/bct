@@ -1,47 +1,128 @@
-body{
-    font-family: 'poppins';
+html {
+  font-family: "poppins";
+  scroll-behavior: smooth;
+  color: white;
 }
 
-header{
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  z-index: 10;
+  overflow:hidden;
+}
+header h1 {
+  padding-left: 10px;
+}
+header ul {
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+header ul li a{
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+header ul li a:hover {
+background-color: #1e1e1e7f;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+  background: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.7)
+  ),
+  url(./1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+}
+
+.quote {
+  width: 40%;
+  position: absolute;
+  left:5%
+}
+
+.content h3{
+  position: absolute;
+  left: 5%;
+  top: -40%;
+  font-size: 5rem;
+}
+
+.nandha-i{
+  animation: show-off both;
+  animation-timeline:view(40% 30%) ;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -40%;
+  width: 30%;
+}
+
+.nandha-n{
+  background-color: #1e1e1e75;
+  border: solid 1px #6b6b6b75;
+  border-radius: 15px ;
+  z-index: 100;
+  position: absolute;
+  padding: 5px;
+  font-size: 24px;
+  top: 90%;
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+.nandha-n h5{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.nandha-n p{
+  font-size: 1rem;
+}
+
+.nandha-img{
     width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: #1e1e1e6c;
-    backdrop-filter: blur(10px);
-    color: white;
-    position: fixed;
-}
-header h1{
-    padding-left: 10px;
-}
-header ul{
-    padding-right: 10px;
-    display: flex;
-    flex-direction: row;
+    border-radius: 50%;
 }
 
-header ul li{
-    list-style-type: none;
-    padding: 10px;
-    border-radius: 25px;
+footer{
+    background-color: #1e1e1e;
 }
 
-header ul li:hover{
-    backdrop-filter: blur(5px);
+@keyframes show-off {
+    from{
+        opacity: 0;
+        transform: translateY(100px) scale(0.75);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
-.home{
-    height: 100vh;
-    width: 100%;
-    background: url(./1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.quote{
-    width: 40%;
-    align-content: center;
-}
+@media only screen and (max-width: 900px) {
+    header ul{
+        display: none;
+    }
+  }
