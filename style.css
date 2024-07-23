@@ -34,10 +34,12 @@ header ul li a {
   list-style-type: none;
   padding: 10px;
   border-radius: 25px;
+  transition: all 0.5s;
 }
 
 header ul li a:hover {
-  background-color: #1e1e1e7f;
+  background-color: #ffffff;
+  color: #000;
   backdrop-filter: blur(5px);
   cursor: pointer;
 }
